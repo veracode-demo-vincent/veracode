@@ -26,6 +26,8 @@ jobs:
   veracode-sca-scan:
     needs: [register]
     runs-on: ubuntu-latest
+    container:
+      image: veracode/scm-packaging:2.1.0
     name: Veracode Component Analysis
     timeout-minutes: 30
 
